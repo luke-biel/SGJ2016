@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 123106610}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6130,8 +6130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd49f0d70ef2e4ec0b52b921e6ed321e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMax: 51
-  yMax: 27
+  extraLayers: []
   dampTime: 0.15
   target: {fileID: 1889035435}
 --- !u!1 &847547237
@@ -8386,7 +8385,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1136855163}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FloorTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8564,7 +8563,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1164085493}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: OuterBorders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9926,7 +9925,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1402133427}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shelf (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12148,7 +12147,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1749603679}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shelf (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12259,7 +12258,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1770478310}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12586,7 +12585,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1837219738}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CeilingTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13470,7 +13469,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1929922642}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15189,7 +15188,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2081653397}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15531,7 +15530,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2106781443}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shelf (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

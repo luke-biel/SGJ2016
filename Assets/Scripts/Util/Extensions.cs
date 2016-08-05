@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class Extensions {
@@ -13,7 +15,7 @@ public static class Extensions {
 		return new Vector3(vector.x, vector.y, z);
 	}
 
-	public static bool isInBOunds(this Vector3 vector, Rect bounds) {
-		return vector.x >= bounds.xMin && vector.x <= bounds.xMax && vector.y >= bounds.yMin && vector.y <= bounds.yMax;
+	public static bool isOneOf<T>(this T str, IEnumerable<T> tags) {
+		return tags.Contains(str);
 	}
 }
