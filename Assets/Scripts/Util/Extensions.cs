@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public static class Extensions {
 		return new Vector3(vector.x, vector.y, z);
 	}
 
-	public static bool isOneOf<T>(this T str, T[] tags) {
+	public static bool isOneOf<T>(this T str, IEnumerable<T> tags) {
 		return tags.Contains(str);
 	}
 }

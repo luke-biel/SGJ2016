@@ -1,24 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 	private float xMin = Mathf.Infinity, xMax = -Mathf.Infinity, yMin = Mathf.Infinity, yMax = -Mathf.Infinity;
 
-	public int[] allowedLayers;
+	public string[] extraLayers;
 
 	public float dampTime = 0.15f;
 	private Vector3 velocity = Vector3.zero;
 	public Transform target;
 
 	public void Start() {
-		if(allowedLayers == null) {
-			allowedLayers = new int[0];
+		List<int> extraLayersValues = new List<int>();
+		int[] allowed = new int[] {LayerMask.NameToLayer("Static Environment")};
+		foreach(string layer in extraLayers) {
+			int layerNo = LayerMask.NameToLayer(layer);
+			if(!extraLayersValues.Contains(layerNo) && !allowed.Contains(layerNo)) {
+				extraLayersValues.Add(layerNo);
+			}
 		}
-		allowedLayers.Concat(new int[] {LayerMask.NameToLayer("Static Environment")});
 		foreach(GameObject go in UnityEngine.Object.FindObjectsOfType<GameObject>()) {
 			Renderer renderer = go.GetComponent<Renderer>();
-			if(renderer || go.layer.isOneOf(allowedLayers)) {
+			if(renderer || go.layer.isOneOf(allowed.Concat(extraLayersValues))) {
 				Bounds bounds = renderer.bounds;
 				if(xMin > bounds.min.x) {
 					xMin = bounds.min.x;

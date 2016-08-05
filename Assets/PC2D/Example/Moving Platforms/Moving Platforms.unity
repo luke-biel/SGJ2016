@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 123106610}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd49f0d70ef2e4ec0b52b921e6ed321e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedLayers: 
+  extraLayers: []
   dampTime: 0.15
   target: {fileID: 1973964892}
 --- !u!1 &853016160
