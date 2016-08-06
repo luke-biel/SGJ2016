@@ -271,9 +271,8 @@ Shader "SpriteLamp/Standard"
             CGPROGRAM
 
             #pragma vertex vert  
-            #pragma fragment frag 
-			#pragma target 3.0
-
+            #pragma fragment frag
+ 
             #include "UnityCG.cginc"
 
             // User-specified properties

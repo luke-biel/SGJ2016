@@ -11,8 +11,9 @@ public class DemonController : MonoBehaviour {
 	[Disabled]
 	public bool isGameInProgress = true; 
 
-	public void StartVoid() {
+	public void Start() {
 		demons = GameObject.FindObjectsOfType<Demon>();
+		StartCoroutine(spawnTimer());
 	}
 
 	public void spawnDemons() {
@@ -20,8 +21,11 @@ public class DemonController : MonoBehaviour {
 			return;
 		}
 		List<Demon> notPossesedItems = getNotPossesedItems().ToList();
+		Random rand = new Random();
 		for(int i = 0; i < notPossesedItems.Count && i < wave; i++) {
-			notPossesedItems[i].posses();
+			int x = Random.Range(0, notPossesedItems.Count - 1);
+			notPossesedItems[x].posses();
+			notPossesedItems.RemoveAt(x);
 		}
 		StartCoroutine(spawnTimer());
 	}
