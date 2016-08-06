@@ -681,6 +681,8 @@ Transform:
   - {fileID: 1568937698}
   - {fileID: 779784653}
   - {fileID: 1999853004}
+  - {fileID: 1712617062}
+  - {fileID: 1281011497}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1202,8 +1204,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 281193561}
   - 212: {fileID: 281193564}
-  - 61: {fileID: 281193563}
-  - 251: {fileID: 281193562}
+  - 68: {fileID: 281193562}
   m_Layer: 8
   m_Name: plant (3)
   m_TagString: Untagged
@@ -1224,39 +1225,21 @@ Transform:
   m_Father: {fileID: 123106610}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!251 &281193562
-PlatformEffector2D:
+--- !u!68 &281193562
+EdgeCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 25162558, guid: e5ae8f3cd5109d648ae6ea4e444162a0,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 281193560}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 0
---- !u!61 &281193563
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6103348, guid: e5ae8f3cd5109d648ae6ea4e444162a0,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281193560}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.73}
+  m_Points:
+  - {x: -2.01, y: 0}
+  - {x: 2.15, y: 0}
 --- !u!212 &281193564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3448,8 +3431,8 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.9191176, g: 0.65251756, b: 0.17571367, a: 1}
-  m_Intensity: 2.43
-  m_Range: 6.43
+  m_Intensity: 2.08
+  m_Range: 11.56
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3696,6 +3679,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 779784653}
   - 212: {fileID: 779784652}
+  - 68: {fileID: 779784654}
   m_Layer: 0
   m_Name: stol_szafka
   m_TagString: Untagged
@@ -3749,6 +3733,21 @@ Transform:
   m_Father: {fileID: 123106610}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &779784654
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779784651}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.06, y: 3.24}
+  m_Points:
+  - {x: -4.92, y: 0}
+  - {x: 4.59, y: 0}
 --- !u!1 &785539184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,8 +5414,8 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.9191176, g: 0.65251756, b: 0.17571367, a: 1}
-  m_Intensity: 2.97
-  m_Range: 9.5
+  m_Intensity: 4.46
+  m_Range: 15
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -6256,6 +6255,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281011497}
   - 212: {fileID: 1281011496}
+  - 95: {fileID: 1281011498}
   m_Layer: 0
   m_Name: lamp_color (1)
   m_TagString: Untagged
@@ -6302,14 +6302,31 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281011495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 34.26, y: 8.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 686777355}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 123106610}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1281011498
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281011495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 544bb3e8c803a10408d941216c0f51bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1287590663
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,6 +7938,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1568937698}
   - 212: {fileID: 1568937697}
+  - 68: {fileID: 1568937699}
   m_Layer: 0
   m_Name: krzeslo_brazowe
   m_TagString: Untagged
@@ -7974,6 +7992,21 @@ Transform:
   m_Father: {fileID: 123106610}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1568937699
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1568937696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.03, y: -1.14}
+  m_Points:
+  - {x: -1.88, y: -0}
+  - {x: 1.72, y: -0.03}
 --- !u!1 &1571776707
 GameObject:
   m_ObjectHideFlags: 0
@@ -8646,6 +8679,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1712617062}
   - 212: {fileID: 1712617061}
+  - 95: {fileID: 1712617063}
   m_Layer: 0
   m_Name: lamp_color
   m_TagString: Untagged
@@ -8692,14 +8726,31 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1712617060}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.59, y: 14.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1037108975}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 123106610}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1712617063
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712617060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 544bb3e8c803a10408d941216c0f51bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1735371949
 GameObject:
   m_ObjectHideFlags: 0
@@ -10133,8 +10184,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -1.9697609, y: -0.99788904}
-  - {x: 1.9697609, y: -0.8769326}
+  - {x: -1.92, y: -1.03}
+  - {x: 1.9697609, y: -1.05}
 --- !u!1 &2003122256
 GameObject:
   m_ObjectHideFlags: 0
@@ -10452,6 +10503,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2040630588}
   - 212: {fileID: 2040630587}
+  - 68: {fileID: 2040630589}
   m_Layer: 0
   m_Name: shelf
   m_TagString: Untagged
@@ -10505,6 +10557,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &2040630589
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2040630586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 1.12}
+  m_Points:
+  - {x: -5.45, y: 0}
+  - {x: 5.09, y: 0}
 --- !u!1 &2049856626
 GameObject:
   m_ObjectHideFlags: 0
