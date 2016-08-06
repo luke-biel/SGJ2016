@@ -1,11 +1,20 @@
+using System.Collections;
 using UnityEngine;
 
 public class Demon : MonoBehaviour {
+    public bool hit;
 	public bool isPossesed;
     private GameObject smoke;
     [SerializeField, Disabled]
     private float power;
     private float ratio;
+
+    public void Update() {
+        if(hit) {
+            onHit();
+            hit = false;
+        }
+    }
 
     internal void posses()
     {
@@ -32,5 +41,17 @@ public class Demon : MonoBehaviour {
             exorcise();
             controler.stopSleeping();
         }
+    }
+
+    public void onHit() {
+        StartCoroutine(drop());
+    }
+
+    private IEnumerator drop() {
+        yield return null;
+        Destroy(this);
+        gameObject.AddComponent<Rigidbody2D>();
+        gameObject.AddComponent<BoxCollider2D>();
+        gameObject.layer = LayerMask.NameToLayer("Player");
     }
 }
