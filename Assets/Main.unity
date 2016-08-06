@@ -1781,7 +1781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobilePad: 0
   speed: 10
-  jumpVelocity: 10
+  jumpVelocity: 20
   disableJumping: 0
   isOnGround: 0
 --- !u!50 &345231585
@@ -1795,7 +1795,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
