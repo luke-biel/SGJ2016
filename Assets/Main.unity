@@ -2891,6 +2891,7 @@ MonoBehaviour:
   mobilePad: 0
   speed: 10
   jumpVelocity: 20
+  sonarRange: 10
   disableJumping: 0
   isOnGround: 0
 --- !u!50 &345231585
@@ -3401,6 +3402,7 @@ GameObject:
   - 95: {fileID: 420875350}
   - 82: {fileID: 420875352}
   - 68: {fileID: 420875353}
+  - 114: {fileID: 420875354}
   m_Layer: 11
   m_Name: lamp_color (1)
   m_TagString: Untagged
@@ -3571,6 +3573,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.88, y: 0}
   - {x: 0.35, y: 0}
+--- !u!114 &420875354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420875348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &425346774
 GameObject:
   m_ObjectHideFlags: 0
@@ -7806,6 +7821,7 @@ GameObject:
   - 114: {fileID: 838218771}
   - 82: {fileID: 838218772}
   - 82: {fileID: 838218773}
+  - 114: {fileID: 838218774}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -8043,6 +8059,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &838218774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838218765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b9b5d193b944998bbafeaa3a5df5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBetweenSpawns: 5
+  wave: 3
+  isGameInProgress: 1
 --- !u!1 &842958674
 GameObject:
   m_ObjectHideFlags: 0
