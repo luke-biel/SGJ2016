@@ -26,9 +26,7 @@ public class CatController : MonoBehaviour {
 	private Rigidbody2D catRigidbody;
 	private float height;
 
-	
 	public Dictionary<Axe, float> axes;
-
 
 	public void Awake() {
 		axes = new Dictionary<Axe, float>();
@@ -58,6 +56,10 @@ public class CatController : MonoBehaviour {
 			disableJumping = true;
 			StartCoroutine(enableJumping());
 		}
+		Physics2D.IgnoreLayerCollision( LayerMask.NameToLayer("Player"), 
+                                 LayerMask.NameToLayer("OneWayPlatform"), 
+                                 !isOnGround || catRigidbody.velocity.y > 0 || axes[Axe.VERTICAL] < 0
+                                );
 	}
 
 	public string axeToString(Axe anAxe) {
