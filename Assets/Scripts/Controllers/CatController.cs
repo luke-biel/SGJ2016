@@ -6,10 +6,6 @@ using System;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class CatController : MonoBehaviour {
 	const float NEAR_ZERO = 0.01f;
-
-	public bool mobilePad = false;
-	public float speed = 10.0f;
-	public float jumpVelocity = 10.0f;
 	public enum Axe {
 		VERTICAL,
 		HORIZONTAL,
@@ -18,6 +14,10 @@ public class CatController : MonoBehaviour {
 		PROBE,
 		ATTACK
 	}
+
+	public bool mobilePad = false;
+	public float speed = 10.0f;
+	public float jumpVelocity = 10.0f;
 
 	[Disabled]
 	public bool disableJumping;
