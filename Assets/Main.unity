@@ -4145,9 +4145,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1889035435}
   - 61: {fileID: 865042664}
-  - 114: {fileID: 2054506701}
-  - 114: {fileID: 865042663}
-  - 114: {fileID: 865042662}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -4155,32 +4152,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &865042662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11405038, guid: f53f0e5cd92ba5148aace93d59b06aaf,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865042661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d064d9116e7af4a4780d9869745abedf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpRotationSpeed: 0
-  visualChild: {fileID: 2024603181}
---- !u!114 &865042663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: f53f0e5cd92ba5148aace93d59b06aaf,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865042661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ee1224ee819bd6418867d9a5171806d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &865042664
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8700,7 +8671,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 865042661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.36, y: 4.249, z: 0}
+  m_LocalPosition: {x: 25.07, y: 1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2024603184}
@@ -9892,78 +9863,6 @@ SpriteRenderer:
   m_Color: {r: 0.30147058, g: 0.29945263, b: 0.2881704, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &2054506701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: f53f0e5cd92ba5148aace93d59b06aaf,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865042661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d522286c13b9ff41b33ba3ff16074d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  staticEnvLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  envCheckDistance: 0.08
-  minDistanceFromEnv: 0.04
-  numOfIterations: 2
-  enableOneWayPlatforms: 1
-  oneWayPlatformsAreWalls: 1
-  movingPlatformLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  additionalRaycastsPerSide: 0
-  groundSpeed: 8
-  timeToGroundSpeed: 0.1
-  groundStopDistance: 0.333
-  airSpeed: 5
-  changeDirectionInAir: 1
-  timeToAirSpeed: 0.2
-  airStopDistance: 2
-  fallSpeed: 16
-  gravityMultiplier: 2
-  fastFallSpeed: 32
-  fastFallGravityMultiplier: 4
-  ladderSpeed: 5
-  jumpHeight: 1.5
-  extraJumpHeight: 1.5
-  numOfAirJumps: 1
-  jumpWindowWhenFalling: 0.2
-  jumpWindowWhenActivated: 0.2
-  enableSlopes: 0
-  angleAllowedForMoving: 80
-  minimumSpeedToMoveUpSlipperySlope: 7.5
-  changeSpeedOnSlopes: 0
-  speedMultiplierOnSlope: 0.75
-  stickOnGround: 0
-  distanceToCheckToStick: 0.75
-  enableWallJumps: 1
-  wallJumpMultiplier: 1
-  wallJumpAngle: 70
-  enableWallSticks: 1
-  wallSticksDuration: 1
-  enableWallSlides: 1
-  wallSlideSpeed: 5
-  timeToWallSlideSpeed: 3
-  enableCornerGrabs: 1
-  cornerGrabDuration: 1000
-  cornerJumpMultiplier: 0.5
-  cornerDistanceCheck: 0.2
-  normalizedValidWallInteraction: 0.2
-  ignoreMovementAfterJump: 0.2
-  wallInteractionCooldown: 0.1
-  wallInteractionThreshold: 0.75
-  enableDashes: 1
-  dashDistance: 3
-  dashDuration: 0.2
-  dashCooldown: 1
-  dashEasingFunction: 1
-  endDashNoGravityDuration: 0.1
-  movingPlatformDebug: 0
-  iterationDebug: 0
 --- !u!1 &2074675959
 GameObject:
   m_ObjectHideFlags: 0
