@@ -28,31 +28,16 @@ public class CatController : MonoBehaviour {
 
 	
 	public Dictionary<Axe, float> axes;
-	public Dictionary<Axe, Action> callbacks;
 
 
 	public void Awake() {
 		axes = new Dictionary<Axe, float>();
-		callbacks = new Dictionary<Axe, Action>();
 		foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
 			// Init all axes and zero em out
 			axes[anAxe] = 0;
-			callbacks[anAxe] = null;
 		}
 		catRigidbody = GetComponent<Rigidbody2D>();
 		height = GetComponent<Collider2D>().bounds.extents.y;
-		callbacks[Axe.PROBE] += () => {
-			setAnimation(Axe.PROBE);
-		};
-		callbacks[Axe.ATTACK] += () => {
-			setAnimation(Axe.ATTACK);
-		};
-		callbacks[Axe.SLEEP] += () => {
-			setAnimation(Axe.SLEEP);
-		};
-		callbacks[Axe.JUMP] += () => {
-			setAnimation(Axe.JUMP);
-		};
 	}
 
 	void Update() {
@@ -61,9 +46,6 @@ public class CatController : MonoBehaviour {
 		if(!mobilePad) {
 			foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
 				axes[anAxe] = Mathf.Clamp(Input.GetAxis(axeToString(anAxe)), -1, 1);
-				if(callbacks[anAxe] != null) {
-					callbacks[anAxe]();
-				}
 			}
 		}
 	}
@@ -93,15 +75,17 @@ public class CatController : MonoBehaviour {
 
 
 	public IEnumerator enableJumping() {
+		setAnimation(Axe.JUMP, true);
 		yield return new WaitForSeconds(0.5f);
 		disableJumping = false;
+		setAnimation(Axe.JUMP, false);
 	}
 
-	private void setAnimation(Axe anAxe) {
-		GetComponent<Animator>().SetBool(axeToString(anAxe), Mathf.Abs(axes[anAxe]) > NEAR_ZERO);
+	private void setAnimation(Axe anAxe, bool? state) {
+		GetComponent<Animator>().SetBool(axeToString(anAxe), state != null ? state.Value : Mathf.Abs(axes[anAxe]) > NEAR_ZERO);
 	}
 
 	private void setAnimation(string field, float f) {
-		GetComponent<Animator>().SetFloat(field, f.toTri());
+		GetComponent<Animator>().SetFloat(field, Mathf.Abs(f));
 	}
 }
