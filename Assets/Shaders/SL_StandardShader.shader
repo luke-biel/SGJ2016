@@ -28,7 +28,7 @@ Shader "SpriteLamp/Standard"
         _LightWrap("Wraparound lighting", Range (0,1.0)) = 0.0	//Higher values of this will cause diffuse light to 'wrap around' and light the away-facing pixels a bit.
         _AmbientOcclusionStrength("Ambient Occlusion Strength", Range (0,1.0)) = 0.0	//Determines how strong the effect of the ambient occlusion map is.
         _EmissiveStrength("Emissive strength", Range(0, 1.0)) = 0.0	//Emissive map is multiplied by this.
-        _AttenuationMultiplier("Attenuation multiplier", Range(0.1, 5.0)) = 1.0	//Distance is multiplied by this for purposes of calculating attenuation
+        _AttenuationMultiplier("Attenuation multiplier", Range(0.1, 5.0)) = 0.1	//Distance is multiplied by this for purposes of calculating attenuation
 		_SpotlightHardness("Spotlight hardness", Range(1.0, 10.0)) = 2.0	//Higher number makes the edge of a spotlight harder.
     }
 

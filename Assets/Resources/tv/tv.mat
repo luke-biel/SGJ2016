@@ -129,7 +129,7 @@ Material:
       second: 0
     - first:
         name: _AttenuationMultiplier
-      second: 0.48
+      second: 0.1
     - first:
         name: _BumpScale
       second: 1
