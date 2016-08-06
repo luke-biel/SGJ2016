@@ -1458,6 +1458,7 @@ GameObject:
   - 4: {fileID: 281193561}
   - 212: {fileID: 281193564}
   - 68: {fileID: 281193562}
+  - 114: {fileID: 281193563}
   m_Layer: 11
   m_Name: plant (3)
   m_TagString: Untagged
@@ -1493,6 +1494,18 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.37, y: 0}
   - {x: 2.27, y: 0}
+--- !u!114 &281193563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281193560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
 --- !u!212 &281193564
 SpriteRenderer:
   m_ObjectHideFlags: 0

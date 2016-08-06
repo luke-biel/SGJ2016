@@ -3,9 +3,14 @@ using UnityEngine;
 public class Demon : MonoBehaviour {
 	public bool isPossesed;
     private GameObject smoke;
+    [SerializeField, Disabled]
+    private float power;
+    private float ratio;
 
     internal void posses()
     {
+        power = 100.0f;
+        ratio = Random.Range(0.4f, 1.1f);
         isPossesed = true;
         smoke = Instantiate(Resources.Load<GameObject>("WhiteSmoke"));
         float y = GetComponent<SpriteRenderer>().bounds.extents.y;
@@ -15,5 +20,13 @@ public class Demon : MonoBehaviour {
     internal void exorcise() {
         Destroy(smoke);
         isPossesed = false;
+    }
+
+    public void drainPower(float dt, CatController controler) {
+        power -= dt * ratio * 10;
+        if(power <= 0) {
+            exorcise();
+            controler.stopSleeping();
+        }
     }
 }

@@ -19,9 +19,12 @@ public class CatController : MonoBehaviour {
 	public float speed = 10.0f;
 	public float jumpVelocity = 10.0f;
 
+	public float sonarRange = 10.0f;
+
 	[Disabled]
 	public bool disableJumping;
 	public bool isOnGround;
+	private bool lockDrain = false;
 
 	private Rigidbody2D catRigidbody;
 	private float height;
@@ -44,6 +47,16 @@ public class CatController : MonoBehaviour {
 		if(!mobilePad) {
 			foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
 				axes[anAxe] = Mathf.Clamp(Input.GetAxis(axeToString(anAxe)), -1, 1);
+			}
+		}
+		if(axes[Axe.SLEEP] != 0) {
+			Demon demon = getClosestPossesedItem();
+			if(demon != null) {
+				if(!lockDrain) {
+					setAnimation(Axe.SLEEP, true);
+				}
+				demon.drainPower(Time.deltaTime, this);
+				lockDrain = true;
 			}
 		}
 	}
@@ -90,5 +103,28 @@ public class CatController : MonoBehaviour {
 
 	private void setAnimation(string field, float f) {
 		GetComponent<Animator>().SetFloat(field, Mathf.Abs(f));
+	}
+
+	public Demon getClosestPossesedItem() {
+		Demon[] demons = GameObject.FindObjectsOfType<Demon>();
+		float distance = Mathf.Infinity;
+		Demon choosenOne = null;
+		foreach(Demon demon in demons) {
+			float dist = Vector2.Distance(demon.transform.position, transform.position);
+			if(demon.isPossesed && dist < distance && dist <= sonarRange) {
+				choosenOne = demon;
+			}
+		}
+		return choosenOne;
+	}
+
+	public void stopSleeping() {
+		setAnimation(Axe.SLEEP, false);
+		StartCoroutine(releaseDrain());
+	}
+
+	public IEnumerator releaseDrain() {
+		yield return new WaitForSeconds(0.75f);
+		lockDrain = false;
 	}
 }
