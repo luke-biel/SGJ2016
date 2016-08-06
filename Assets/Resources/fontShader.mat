@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: shelf
-  m_Shader: {fileID: 4800000, guid: 069032f5bd5666541afcfeb10ac30a51, type: 3}
+  m_Name: fontShader
+  m_Shader: {fileID: 10765, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -16,15 +16,9 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _AmbientOcclusion
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: bda792b1a6a79444d8fe6d87f0777c57, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -52,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _EmissiveColour
+        name: _MainBump
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -60,19 +54,13 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: cb419db3af47bbd4285d73f2c5306e7e, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _NormalDepth
-      second:
-        m_Texture: {fileID: 2800000, guid: bda792b1a6a79444d8fe6d87f0777c57, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -87,28 +75,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SpecGloss
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _AmbientOcclusionStrength
-      second: 0
-    - first:
-        name: _AmplifyDepth
-      second: 0
-    - first:
-        name: _AttenuationMultiplier
-      second: 0.1
     - first:
         name: _BumpScale
       second: 1
     - first:
-        name: _CelShadingLevels
-      second: 10
+        name: _ColorMask
+      second: 15
     - first:
         name: _Cutoff
       second: 0.5
@@ -119,9 +92,6 @@ Material:
         name: _DstBlend
       second: 0
     - first:
-        name: _EmissiveStrength
-      second: 0
-    - first:
         name: _GlossMapScale
       second: 1
     - first:
@@ -130,9 +100,6 @@ Material:
     - first:
         name: _GlossyReflections
       second: 1
-    - first:
-        name: _LightWrap
-      second: 0
     - first:
         name: _Metallic
       second: 0
@@ -147,38 +114,41 @@ Material:
       second: 0.02
     - first:
         name: _Shininess
-      second: 0.246
+      second: 0.2
     - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
-        name: _SpecExponent
-      second: 10
-    - first:
-        name: _SpecStrength
-      second: 1
-    - first:
         name: _SpecularHighlights
-      second: 1
-    - first:
-        name: _SpotlightHardness
       second: 1
     - first:
         name: _SrcBlend
       second: 1
     - first:
+        name: _Stencil
+      second: 0
+    - first:
+        name: _StencilComp
+      second: 8
+    - first:
+        name: _StencilOp
+      second: 0
+    - first:
+        name: _StencilReadMask
+      second: 255
+    - first:
+        name: _StencilWriteMask
+      second: 255
+    - first:
         name: _UVSec
+      second: 0
+    - first:
+        name: _UseUIAlphaClip
       second: 0
     - first:
         name: _ZWrite
       second: 1
     m_Colors:
-    - first:
-        name: _AboveAmbientColour
-      second: {r: 0.36764705, g: 0.36764705, b: 0.36764705, a: 0.3}
-    - first:
-        name: _BelowAmbientColour
-      second: {r: 0.04411763, g: 0.04411763, b: 0.04411763, a: 0.1}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -186,5 +156,5 @@ Material:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
-        name: _TextureRes
-      second: {r: 256, g: 256, b: 0, a: 0}
+        name: _Specular
+      second: {r: 0, g: 0, b: 0, a: 0}
