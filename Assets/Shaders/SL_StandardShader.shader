@@ -21,7 +21,7 @@ Shader "SpriteLamp/Standard"
         _SpecExponent ("Specular Exponent", Range (1.0,50.0)) = 10.0		//Multiplied by the alpha channel of the spec map to get the specular exponent.
         _SpecStrength ("Specular Strength", Range (0.0,5.0)) = 1.0		//Multiplier that affects the brightness of specular highlights
         _AmplifyDepth ("Amplify Depth", Range (0,1.0)) = 0.0	//Affects the 'severity' of the depth map - affects shadows (and shading to a lesser extent).
-        _CelShadingLevels ("Cel Shading Levels", Float) = 0		//Set to zero to have no cel shading.
+        _CelShadingLevels ("Cel Shading Levels", Float) = 10		//Set to zero to have no cel shading.
         _TextureRes("Texture Resolution", Vector) = (256, 256, 0, 0)	//Leave this to be set via a script.
         _AboveAmbientColour("Upper Ambient Colour", Color) = (0.3, 0.3, 0.3, 0.3)	//Ambient light coming from above.
         _BelowAmbientColour("Lower Ambient Colour", Color) = (0.1, 0.1, 0.1, 0.1)	//Ambient light coming from below.
