@@ -56,10 +56,11 @@ public class CatController : MonoBehaviour {
 			disableJumping = true;
 			StartCoroutine(enableJumping());
 		}
-		Physics2D.IgnoreLayerCollision( LayerMask.NameToLayer("Player"), 
-                                 LayerMask.NameToLayer("OneWayPlatform"), 
-                                 !isOnGround || catRigidbody.velocity.y > 0 || axes[Axe.VERTICAL] < 0
-                                );
+		Physics2D.IgnoreLayerCollision( 
+			LayerMask.NameToLayer("Player"),
+            LayerMask.NameToLayer("OneWayPlatform"), 
+            !isOnGround || catRigidbody.velocity.y > 0 || axes[Axe.VERTICAL] < 0
+        );
 	}
 
 	public string axeToString(Axe anAxe) {
