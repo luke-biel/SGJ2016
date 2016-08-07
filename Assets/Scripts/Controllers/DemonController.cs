@@ -64,8 +64,8 @@ public class DemonController : MonoBehaviour {
 	}
 
 	public void gameOver() {
-		Debug.Log("Lost");
-		Debug.Break();
-		Application.Quit();
+		GameObject go = Instantiate(Resources.Load<GameObject>("nicky"));
+		go.transform.position = GameObject.Find("Cat").transform.position;
+		Time.timeScale = 0;
 	}
 }
