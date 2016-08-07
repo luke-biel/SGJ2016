@@ -57,7 +57,7 @@ public class DemonController : MonoBehaviour {
 	}
 
 	public static void drainGransLife(float amt) {
-		granLife -= amt;
+		//granLife -= amt;
 		if(granLife <= 0) {
 			GameObject.Find("Camera").GetComponent<DemonController>().gameOver();
 		}
