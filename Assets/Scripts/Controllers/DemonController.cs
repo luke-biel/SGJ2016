@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DemonController : MonoBehaviour {
 	private Demon[] demons;
@@ -11,9 +12,12 @@ public class DemonController : MonoBehaviour {
 	[Disabled]
 	public bool isGameInProgress = true; 
 
+	public static float granLife;
+
 	public void Start() {
 		demons = GameObject.FindObjectsOfType<Demon>();
 		StartCoroutine(spawnTimer());
+		granLife = 1000;
 	}
 
 	public void spawnDemons() {
@@ -50,5 +54,18 @@ public class DemonController : MonoBehaviour {
 	public IEnumerator spawnTimer() {
 		yield return new WaitForSeconds(delayBetweenSpawns);
 		spawnDemons();
+	}
+
+	public static void drainGransLife(float amt) {
+		granLife -= amt;
+		if(granLife <= 0) {
+			GameObject.Find("Camera").GetComponent<DemonController>().gameOver();
+		}
+	}
+
+	public void gameOver() {
+		Debug.Log("Lost");
+		Debug.Break();
+		Application.Quit();
 	}
 }
