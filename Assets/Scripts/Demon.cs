@@ -7,10 +7,11 @@ public class Demon : MonoBehaviour {
     [SerializeField, Disabled]
     private float power;
     private float ratio;
+    private bool isBeingDrrained = false;
 
     public void Update() {
         if(isPossesed) {
-            DemonController.drainGransLife(Time.deltaTime);
+           DemonController.drainGransLife(Time.deltaTime);
         }
     }
 

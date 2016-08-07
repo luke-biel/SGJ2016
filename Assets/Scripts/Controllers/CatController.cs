@@ -60,7 +60,7 @@ public class CatController : MonoBehaviour {
 				if (!lockDrain) {
 					setAnimation(Axe.SLEEP, true);
 				}
-				demon.drainPower(Time.deltaTime, this);
+				demon.drainPower(Time.deltaTime * 10, this);
 				lockDrain = true;
 			}
 		}

@@ -2853,7 +2853,7 @@ GameObject:
   - 50: {fileID: 345231585}
   - 114: {fileID: 345231584}
   - 95: {fileID: 345231583}
-  - 60: {fileID: 345231586}
+  - 58: {fileID: 345231586}
   m_Layer: 10
   m_Name: Cat
   m_TagString: Player
@@ -2912,8 +2912,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &345231586
-PolygonCollider2D:
+--- !u!58 &345231586
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2923,23 +2923,9 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 1.7, y: -0.90000004}
-      - {x: 1.9, y: -0.2}
-      - {x: 1.9, y: 0.90000004}
-      - {x: 1.1, y: 0.90000004}
-      - {x: 0.4, y: 0.5}
-      - {x: -1.4, y: 0.90000004}
-      - {x: -1.9, y: 0.90000004}
-      - {x: -2.5, y: 0.6}
-      - {x: -2.5, y: -0.7}
-      - {x: -2.2, y: -1.5}
-      - {x: -1, y: -1.5}
-      - {x: -0.90000004, y: -1}
-      - {x: -0.5, y: -1.5}
-      - {x: 0.8, y: -1.5}
+  m_Offset: {x: -0.42, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.4877963
 --- !u!212 &345231587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2953,7 +2939,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb93f4257e690064ba1b0d0b8a441e5a, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -2969,7 +2955,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1756507161
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb8aa06d019178146a35a87963047470, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b68bbecc8c795b24fbcbc3b9ba29d23d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2980,7 +2966,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 345231582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.89, y: 1.75, z: -0.08}
+  m_LocalPosition: {x: 77.65, y: 2.77, z: -0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 288754763}
@@ -4448,6 +4434,7 @@ GameObject:
   - 82: {fileID: 499782355}
   - 82: {fileID: 499782356}
   - 68: {fileID: 499782357}
+  - 114: {fileID: 499782358}
   m_Layer: 11
   m_Name: lamp_color (2)
   m_TagString: Untagged
@@ -4462,7 +4449,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499782351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: 8.94, z: 0}
+  m_LocalPosition: {x: 35, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1769123184}
@@ -4692,6 +4679,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.88, y: 0}
   - {x: 0.35, y: 0}
+--- !u!114 &499782358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499782351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &508492019
 GameObject:
   m_ObjectHideFlags: 0
