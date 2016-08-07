@@ -1837,6 +1837,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 202671806}
   - 212: {fileID: 202671805}
+  - 114: {fileID: 202671807}
   m_Layer: 0
   m_Name: waza_kwiatki (1)
   m_TagString: Untagged
@@ -1890,6 +1891,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202671807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202671804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &219478786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2130,7 @@ GameObject:
   - 4: {fileID: 281193561}
   - 212: {fileID: 281193564}
   - 68: {fileID: 281193562}
+  - 114: {fileID: 281193563}
   m_Layer: 11
   m_Name: plant (3)
   m_TagString: Untagged
@@ -2151,6 +2166,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.37, y: 0}
   - {x: 2.27, y: 0}
+--- !u!114 &281193563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281193560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!212 &281193564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2892,7 +2920,7 @@ MonoBehaviour:
   mobilePad: 0
   speed: 10
   jumpVelocity: 20
-  sonarRange: 10
+  sonarRange: 2
   disableJumping: 0
   isOnGround: 0
 --- !u!50 &345231585
@@ -4449,7 +4477,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499782351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: 2.2, z: 0}
+  m_LocalPosition: {x: 34.74, y: 8.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1769123184}
@@ -5565,6 +5593,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 639150994}
   - 212: {fileID: 639150993}
+  - 114: {fileID: 639150995}
   m_Layer: 0
   m_Name: glass_color (2)
   m_TagString: Untagged
@@ -5618,6 +5647,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &639150995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639150992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &648732833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6932,6 +6993,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 733860271}
   - 212: {fileID: 733860270}
+  - 114: {fileID: 733860272}
   m_Layer: 0
   m_Name: glass_color (5)
   m_TagString: Untagged
@@ -6985,6 +7047,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733860272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 733860269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &740848337
 GameObject:
   m_ObjectHideFlags: 0
@@ -7937,6 +8012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd49f0d70ef2e4ec0b52b921e6ed321e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shake: 0
+  shakeAmount: 0.7
+  decreaseFactor: 1
   extraLayers: []
   dampTime: 0.15
   target: {fileID: 345231588}
@@ -8850,6 +8928,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 917093127}
   - 212: {fileID: 917093126}
+  - 114: {fileID: 917093128}
   m_Layer: 0
   m_Name: glass_color (3)
   m_TagString: Untagged
@@ -8903,6 +8982,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917093128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917093125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &920896557
 GameObject:
   m_ObjectHideFlags: 0
@@ -9451,6 +9562,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 970546427}
   - 212: {fileID: 970546426}
+  - 114: {fileID: 970546428}
   m_Layer: 0
   m_Name: glass_color (1)
   m_TagString: Untagged
@@ -9504,6 +9616,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970546428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970546425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &973146938
 GameObject:
   m_ObjectHideFlags: 0
@@ -9515,6 +9640,7 @@ GameObject:
   - 223: {fileID: 973146942}
   - 114: {fileID: 973146941}
   - 114: {fileID: 973146940}
+  - 114: {fileID: 973146943}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -9597,6 +9723,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &973146943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973146938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &974802187
 GameObject:
   m_ObjectHideFlags: 0
@@ -11093,6 +11232,7 @@ GameObject:
   - 82: {fileID: 1166507158}
   - 82: {fileID: 1166507157}
   - 68: {fileID: 1166507161}
+  - 114: {fileID: 1166507162}
   m_Layer: 11
   m_Name: lamp_color (1)
   m_TagString: Untagged
@@ -11337,6 +11477,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.88, y: 0}
   - {x: 0.35, y: 0}
+--- !u!114 &1166507162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166507155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &1171006364
 GameObject:
   m_ObjectHideFlags: 1
@@ -12454,6 +12607,7 @@ GameObject:
   - 82: {fileID: 1281011499}
   - 82: {fileID: 1281011500}
   - 68: {fileID: 1281011501}
+  - 114: {fileID: 1281011502}
   m_Layer: 11
   m_Name: lamp_color (1)
   m_TagString: Untagged
@@ -12698,6 +12852,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.88, y: 0}
   - {x: 0.35, y: 0}
+--- !u!114 &1281011502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281011495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &1287590663
 GameObject:
   m_ObjectHideFlags: 0
@@ -12769,6 +12936,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1291719709}
   - 212: {fileID: 1291719708}
+  - 114: {fileID: 1291719710}
   m_Layer: 0
   m_Name: glass_color
   m_TagString: Untagged
@@ -12822,6 +12990,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291719710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291719707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &1295294385
 GameObject:
   m_ObjectHideFlags: 0
@@ -17790,6 +17971,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1705729474}
   - 212: {fileID: 1705729473}
+  - 114: {fileID: 1705729475}
   m_Layer: 0
   m_Name: glass_color (6)
   m_TagString: Untagged
@@ -17843,6 +18025,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705729475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1705729472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &1708668529
 GameObject:
   m_ObjectHideFlags: 0
@@ -17934,6 +18129,7 @@ GameObject:
   - 82: {fileID: 1712617065}
   - 82: {fileID: 1712617066}
   - 68: {fileID: 1712617067}
+  - 222: {fileID: 1712617068}
   m_Layer: 11
   m_Name: lamp_color
   m_TagString: Untagged
@@ -18252,6 +18448,12 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.88, y: 0}
   - {x: 0.35, y: 0}
+--- !u!222 &1712617068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712617060}
 --- !u!1 &1727179250
 GameObject:
   m_ObjectHideFlags: 0
@@ -19969,6 +20171,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1887491327}
   - 212: {fileID: 1887491326}
+  - 114: {fileID: 1887491328}
   m_Layer: 0
   m_Name: glass_color (4)
   m_TagString: Untagged
@@ -20022,6 +20225,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887491328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887491325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &1929352568
 GameObject:
   m_ObjectHideFlags: 0
