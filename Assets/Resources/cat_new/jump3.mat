@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: jmp3
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: jump3
+  m_Shader: {fileID: 4800000, guid: 069032f5bd5666541afcfeb10ac30a51, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -15,6 +15,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
+    - first:
+        name: _AmbientOcclusion
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -46,15 +52,27 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _MainTex
+        name: _EmissiveColour
       second:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: f97a238a92eea324d8a4da6749477d24, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _NormalDepth
+      second:
+        m_Texture: {fileID: 2800000, guid: 248a2e0f0f27c6143a1482fc5478281d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -69,10 +87,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SpecGloss
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: _AmbientOcclusionStrength
+      second: 0
+    - first:
+        name: _AmplifyDepth
+      second: 0
+    - first:
+        name: _AttenuationMultiplier
+      second: 0.1
     - first:
         name: _BumpScale
       second: 1
+    - first:
+        name: _CelShadingLevels
+      second: 10
     - first:
         name: _Cutoff
       second: 0.5
@@ -83,6 +119,9 @@ Material:
         name: _DstBlend
       second: 0
     - first:
+        name: _EmissiveStrength
+      second: 0
+    - first:
         name: _GlossMapScale
       second: 1
     - first:
@@ -91,6 +130,9 @@ Material:
     - first:
         name: _GlossyReflections
       second: 1
+    - first:
+        name: _LightWrap
+      second: 0
     - first:
         name: _Metallic
       second: 0
@@ -107,8 +149,17 @@ Material:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
+        name: _SpecExponent
+      second: 10
+    - first:
+        name: _SpecStrength
+      second: 1
+    - first:
         name: _SpecularHighlights
       second: 1
+    - first:
+        name: _SpotlightHardness
+      second: 2
     - first:
         name: _SrcBlend
       second: 1
@@ -120,8 +171,17 @@ Material:
       second: 1
     m_Colors:
     - first:
+        name: _AboveAmbientColour
+      second: {r: 0.9, g: 0.9, b: 0.9, a: 0.9}
+    - first:
+        name: _BelowAmbientColour
+      second: {r: 0.1, g: 0.1, b: 0.1, a: 0.1}
+    - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _TextureRes
+      second: {r: 256, g: 256, b: 0, a: 0}
