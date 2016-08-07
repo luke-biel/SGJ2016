@@ -423,7 +423,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Nothing
-  m_Speed: 0.1
+  m_Speed: 0.05
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000011352574224}
@@ -498,7 +498,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Running
-  m_Speed: 1
+  m_Speed: 0.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101000012974025134}
