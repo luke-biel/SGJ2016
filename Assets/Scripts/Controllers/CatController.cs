@@ -33,7 +33,7 @@ public class CatController : MonoBehaviour {
 
 	public void Awake() {
 		axes = new Dictionary<Axe, float>();
-		foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
+		foreach (Axe anAxe in Enum.GetValues(typeof(Axe))) {
 			// Init all axes and zero em out
 			axes[anAxe] = 0;
 		}
@@ -43,16 +43,19 @@ public class CatController : MonoBehaviour {
 
 	void Update() {
 		setAnimation("falling", isOnGround ? 0 : catRigidbody.velocity.y);
+		if (catRigidbody.velocity.x == 0 && catRigidbody.velocity.y == 0) {
+			GetComponent<Animator>().Play("Nothing");
+		}
 		setAnimation("running", Mathf.Abs(catRigidbody.velocity.x));
-		if(!mobilePad) {
-			foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
+		if (!mobilePad) {
+			foreach (Axe anAxe in Enum.GetValues(typeof(Axe))) {
 				axes[anAxe] = Mathf.Clamp(Input.GetAxis(axeToString(anAxe)), -1, 1);
 			}
 		}
-		if(axes[Axe.SLEEP] != 0) {
+		if (axes[Axe.SLEEP] != 0) {
 			Demon demon = getClosestPossesedItem();
-			if(demon != null) {
-				if(!lockDrain) {
+			if (demon != null) {
+				if (!lockDrain) {
 					setAnimation(Axe.SLEEP, true);
 				}
 				demon.drainPower(Time.deltaTime, this);
@@ -64,18 +67,18 @@ public class CatController : MonoBehaviour {
 	void FixedUpdate() {
 		float horizontalSpeed = axes[Axe.HORIZONTAL] * speed;
 		catRigidbody.velocity = new Vector2(horizontalSpeed, catRigidbody.velocity.y);
-		if(Mathf.Abs(horizontalSpeed) > NEAR_ZERO)
+		if (Mathf.Abs(horizontalSpeed) > NEAR_ZERO)
 			GetComponent<SpriteRenderer>().flipX = horizontalSpeed > 0;
-		if(axes[Axe.JUMP] != 0 && !disableJumping && isOnGround) {
+		if (axes[Axe.JUMP] != 0 && !disableJumping && isOnGround) {
 			catRigidbody.AddForce(new Vector2(0, jumpVelocity), ForceMode2D.Impulse);
 			disableJumping = true;
 			StartCoroutine(enableJumping());
 		}
-		Physics2D.IgnoreLayerCollision( 
+		Physics2D.IgnoreLayerCollision(
 			LayerMask.NameToLayer("Player"),
-            LayerMask.NameToLayer("OneWayPlatform"), 
-            !isOnGround || catRigidbody.velocity.y > 0 || axes[Axe.VERTICAL] < 0
-        );
+			LayerMask.NameToLayer("OneWayPlatform"),
+			!isOnGround || catRigidbody.velocity.y > 0 || axes[Axe.VERTICAL] < 0
+		);
 	}
 
 	public string axeToString(Axe anAxe) {
@@ -83,8 +86,8 @@ public class CatController : MonoBehaviour {
 	}
 
 	public Axe stringToAxe(string aString) {
-		foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
-			if(aString == anAxe.ToString().ToLower()) {
+		foreach (Axe anAxe in Enum.GetValues(typeof(Axe))) {
+			if (aString == anAxe.ToString().ToLower()) {
 				return anAxe;
 			}
 		}
@@ -111,9 +114,9 @@ public class CatController : MonoBehaviour {
 		Demon[] demons = GameObject.FindObjectsOfType<Demon>();
 		float distance = Mathf.Infinity;
 		Demon choosenOne = null;
-		foreach(Demon demon in demons) {
+		foreach (Demon demon in demons) {
 			float dist = Vector2.Distance(demon.transform.position, transform.position);
-			if(demon.isPossesed && dist < distance && dist <= sonarRange) {
+			if (demon.isPossesed && dist < distance && dist <= sonarRange) {
 				choosenOne = demon;
 			}
 		}

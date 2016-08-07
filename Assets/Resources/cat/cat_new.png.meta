@@ -1,38 +1,38 @@
 fileFormatVersion: 2
-guid: f31eec51988194e588b2031c9e1c0a82
-timeCreated: 1470541203
+guid: b68bbecc8c795b24fbcbc3b9ba29d23d
+timeCreated: 1470544656
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cat_0
-    21300002: cat_1
-    21300004: cat_2
-    21300006: cat_3
-    21300008: cat_4
-    21300010: cat_5
-    21300012: cat_6
-    21300014: cat_7
-    21300016: cat_8
-    21300018: cat_9
-    21300020: cat_10
-    21300022: cat_11
-    21300024: cat_12
-    21300026: cat_13
-    21300028: cat_14
-    21300030: cat_15
-    21300032: cat_16
-    21300034: cat_17
-    21300036: cat_18
-    21300038: cat_19
-    21300040: cat_20
-    21300042: cat_21
-    21300044: cat_22
-    21300046: cat_23
-    21300048: cat_24
+    21300000: cat_new_0
+    21300002: cat_new_1
+    21300004: cat_new_2
+    21300006: cat_new_3
+    21300008: cat_new_4
+    21300010: cat_new_5
+    21300012: cat_new_6
+    21300014: cat_new_7
+    21300016: cat_new_8
+    21300018: cat_new_9
+    21300020: cat_new_10
+    21300022: cat_new_11
+    21300024: cat_new_12
+    21300026: cat_new_13
+    21300028: cat_new_14
+    21300030: cat_new_15
+    21300032: cat_new_16
+    21300034: cat_new_17
+    21300036: cat_new_18
+    21300038: cat_new_19
+    21300040: cat_new_20
+    21300042: cat_new_21
+    21300044: cat_new_22
+    21300046: cat_new_23
+    21300048: cat_new_24
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -54,7 +54,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -75,327 +75,301 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: cat_0
+    - name: cat_new_0
       rect:
         serializedVersion: 2
         x: 0
         y: 720
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_1
+    - name: cat_new_1
       rect:
         serializedVersion: 2
         x: 0
         y: 690
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_2
+    - name: cat_new_2
       rect:
         serializedVersion: 2
         x: 0
         y: 660
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_3
+    - name: cat_new_3
       rect:
         serializedVersion: 2
         x: 0
         y: 630
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_4
+    - name: cat_new_4
       rect:
         serializedVersion: 2
         x: 0
         y: 600
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_5
+    - name: cat_new_5
       rect:
         serializedVersion: 2
         x: 0
         y: 570
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_6
+    - name: cat_new_6
       rect:
         serializedVersion: 2
         x: 0
         y: 540
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_7
+    - name: cat_new_7
       rect:
         serializedVersion: 2
         x: 0
         y: 510
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_8
+    - name: cat_new_8
       rect:
         serializedVersion: 2
         x: 0
         y: 480
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_9
+    - name: cat_new_9
       rect:
         serializedVersion: 2
         x: 0
         y: 450
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_10
+    - name: cat_new_10
       rect:
         serializedVersion: 2
         x: 0
         y: 420
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_11
+    - name: cat_new_11
       rect:
         serializedVersion: 2
         x: 0
         y: 390
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_12
+    - name: cat_new_12
       rect:
         serializedVersion: 2
         x: 0
         y: 360
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_13
+    - name: cat_new_13
       rect:
         serializedVersion: 2
         x: 0
         y: 330
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_14
+    - name: cat_new_14
       rect:
         serializedVersion: 2
         x: 0
         y: 300
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_15
+    - name: cat_new_15
       rect:
         serializedVersion: 2
         x: 0
         y: 270
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_16
+    - name: cat_new_16
       rect:
         serializedVersion: 2
         x: 0
         y: 240
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_17
+    - name: cat_new_17
       rect:
         serializedVersion: 2
         x: 0
         y: 210
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_18
+    - name: cat_new_18
       rect:
         serializedVersion: 2
         x: 0
         y: 180
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_19
+    - name: cat_new_19
       rect:
         serializedVersion: 2
         x: 0
         y: 150
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_20
+    - name: cat_new_20
       rect:
         serializedVersion: 2
         x: 0
         y: 120
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_21
+    - name: cat_new_21
       rect:
         serializedVersion: 2
         x: 0
         y: 90
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_22
+    - name: cat_new_22
       rect:
         serializedVersion: 2
         x: 0
         y: 60
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_23
+    - name: cat_new_23
       rect:
         serializedVersion: 2
         x: 0
         y: 30
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: cat_24
+    - name: cat_new_24
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 62
+        width: 60
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
