@@ -613,7 +613,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 345231588}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &79224560
 Light:
@@ -2853,7 +2853,7 @@ GameObject:
   - 50: {fileID: 345231585}
   - 114: {fileID: 345231584}
   - 95: {fileID: 345231583}
-  - 60: {fileID: 345231586}
+  - 58: {fileID: 345231586}
   m_Layer: 10
   m_Name: Cat
   m_TagString: Player
@@ -2912,8 +2912,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &345231586
-PolygonCollider2D:
+--- !u!58 &345231586
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2923,23 +2923,9 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.21}
-  m_Points:
-    m_Paths:
-    - - {x: 1.7, y: -0.90000004}
-      - {x: 1.9, y: -0.2}
-      - {x: 1.9, y: 0.90000004}
-      - {x: 1.1, y: 0.90000004}
-      - {x: 0.4, y: 0.5}
-      - {x: -1.4, y: 0.90000004}
-      - {x: -1.9, y: 0.90000004}
-      - {x: -2.5, y: 0.6}
-      - {x: -2.5, y: -0.7}
-      - {x: -2.2, y: -1.5}
-      - {x: -1, y: -1.5}
-      - {x: -0.90000004, y: -1}
-      - {x: -0.5, y: -1.5}
-      - {x: 0.8, y: -1.5}
+  m_Offset: {x: -0.42, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.4877963
 --- !u!212 &345231587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2984,7 +2970,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 288754763}
-  - {fileID: 921622105}
   - {fileID: 79224559}
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -4449,6 +4434,7 @@ GameObject:
   - 82: {fileID: 499782355}
   - 82: {fileID: 499782356}
   - 68: {fileID: 499782357}
+  - 114: {fileID: 499782358}
   m_Layer: 11
   m_Name: lamp_color (2)
   m_TagString: Untagged
@@ -4463,7 +4449,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499782351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: 8.94, z: 0}
+  m_LocalPosition: {x: 35, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1769123184}
@@ -4693,6 +4679,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.88, y: 0}
   - {x: 0.35, y: 0}
+--- !u!114 &499782358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499782351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8a1df5b14fd4807a46d374af26bb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPossesed: 0
+  power: 0
 --- !u!1 &508492019
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,61 +8980,6 @@ SpriteRenderer:
   m_Color: {r: 0.30147058, g: 0.29945263, b: 0.2881704, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &921622104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 921622105}
-  - 58: {fileID: 921622107}
-  - 114: {fileID: 921622106}
-  m_Layer: 0
-  m_Name: FeetReal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &921622105
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 921622104}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.382, y: -1.396, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 345231588}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &921622106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 921622104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4b5150755634e3f8835db5c44ae282, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &921622107
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 921622104}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.09}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!1 &939911902
 GameObject:
   m_ObjectHideFlags: 0
