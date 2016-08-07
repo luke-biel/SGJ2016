@@ -6,6 +6,10 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 	private float xMin = Mathf.Infinity, xMax = -Mathf.Infinity, yMin = Mathf.Infinity, yMax = -Mathf.Infinity;
 
+	public float shake = 0;
+	public float shakeAmount = 0.3f;
+	public float decreaseFactor = 1.0f;
+
 	public string[] extraLayers;
 
 	public float dampTime = 0.15f;
@@ -56,14 +60,19 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void Update () 
-	{
-		if (target)
-		{
+	{		
+		if (shake > 0) {
+			transform.localPosition = new Vector2(transform.position.x, transform.position.y) + (UnityEngine.Random.insideUnitCircle * shakeAmount);
+			shake -= Time.deltaTime * decreaseFactor;
+		} else if (target) {
 			Vector3 point = Camera.main.WorldToViewportPoint(target.position);
 			Vector3 delta = target.position - Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z));
 			Vector3 destination = transform.position + delta;
 			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
-		}
+		} else {	
+			shake = 0.0f;
+ 	 	}
+		  transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -4);
 	}
 
 	void LateUpdate() {

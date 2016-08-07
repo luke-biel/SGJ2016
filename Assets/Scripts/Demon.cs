@@ -38,6 +38,7 @@ public class Demon : MonoBehaviour {
 
     public void drainPower(float dt, CatController controler) {
         power -= dt * ratio * 10;
+        Camera.main.GetComponent<CameraController>().shake = (100 - power) / 1000; 
         if(power <= 0) {
             exorcise();
             controler.stopSleeping();
