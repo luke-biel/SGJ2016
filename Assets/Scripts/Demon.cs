@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 
 public class Demon : MonoBehaviour {
-    public bool hit;
 	public bool isPossesed;
     private GameObject smoke;
     [SerializeField, Disabled]
@@ -10,9 +9,8 @@ public class Demon : MonoBehaviour {
     private float ratio;
 
     public void Update() {
-        if(hit) {
-            onHit();
-            hit = false;
+        if(isPossesed) {
+            DemonController.drainGransLife(Time.deltaTime);
         }
     }
 

@@ -29,6 +29,8 @@ public class CatController : MonoBehaviour {
 	private Rigidbody2D catRigidbody;
 	private float height;
 
+	private bool canHit = true;
+
 	public Dictionary<Axe, float> axes;
 
 	public void Awake() {
