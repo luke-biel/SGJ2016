@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ public class Demon : MonoBehaviour {
     internal void posses()
     {
         power = 100.0f;
-        ratio = Random.Range(0.4f, 1.1f);
+        ratio = UnityEngine.Random.Range(0.4f, 1.1f);
         isPossesed = true;
         smoke = Instantiate(Resources.Load<GameObject>("WhiteSmoke"));
         float y = GetComponent<SpriteRenderer>().bounds.extents.y;
@@ -58,4 +59,7 @@ public class Demon : MonoBehaviour {
         go.layer = LayerMask.NameToLayer("Faller");
         Physics2D.IgnoreLayerCollision(go.layer, LayerMask.NameToLayer("OneWayPlatform"), true);
     }
+
+	internal void CatSeesMe() {
+	}
 }

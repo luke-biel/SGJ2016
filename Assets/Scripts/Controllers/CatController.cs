@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using System;
+using System.Linq;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class CatController : MonoBehaviour {
@@ -9,7 +10,7 @@ public class CatController : MonoBehaviour {
 	public enum Axe {
 		VERTICAL,
 		HORIZONTAL,
-		SLEEP,
+		EGZORCISM,
 		JUMP,
 		PROBE,
 		ATTACK
@@ -54,11 +55,12 @@ public class CatController : MonoBehaviour {
 				axes[anAxe] = Mathf.Clamp(Input.GetAxis(axeToString(anAxe)), -1, 1);
 			}
 		}
-		if (axes[Axe.SLEEP] != 0) {
+		if (axes[Axe.EGZORCISM] != 0) {
 			Demon demon = getClosestPossesedItem();
 			if (demon != null) {
+				demon.CatSeesMe();
 				if (!lockDrain) {
-					setAnimation(Axe.SLEEP, true);
+					setAnimation(Axe.EGZORCISM, true);
 				}
 				demon.drainPower(Time.deltaTime * 10, this);
 				lockDrain = true;
@@ -112,6 +114,17 @@ public class CatController : MonoBehaviour {
 		GetComponent<Animator>().SetFloat(field, f);
 	}
 
+	public Dictionary<Demon, float> getAllDemons() {
+		Demon[] demons = GameObject.FindObjectsOfType<Demon>();
+		Dictionary<Demon, float> demonsDict = new Dictionary<Demon, float>();
+		foreach (Demon d in demons) {
+			float distance = Vector2.Distance(d.transform.position, transform.position);
+			demonsDict.Add(d, distance);
+		}
+		return demonsDict;
+	}
+
+
 	public Demon getClosestPossesedItem() {
 		Demon[] demons = GameObject.FindObjectsOfType<Demon>();
 		float distance = Mathf.Infinity;
@@ -126,7 +139,7 @@ public class CatController : MonoBehaviour {
 	}
 
 	public void stopSleeping() {
-		setAnimation(Axe.SLEEP, false);
+		setAnimation(Axe.EGZORCISM, false);
 		StartCoroutine(releaseDrain());
 	}
 
