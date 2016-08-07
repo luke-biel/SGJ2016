@@ -42,8 +42,8 @@ public class CatController : MonoBehaviour {
 	}
 
 	void Update() {
-		setAnimation("falling", catRigidbody.velocity.y);
-		setAnimation("running", catRigidbody.velocity.x);
+		setAnimation("falling", isOnGround ? 0 : catRigidbody.velocity.y);
+		setAnimation("running", Mathf.Abs(catRigidbody.velocity.x));
 		if(!mobilePad) {
 			foreach(Axe anAxe in Enum.GetValues(typeof(Axe))) {
 				axes[anAxe] = Mathf.Clamp(Input.GetAxis(axeToString(anAxe)), -1, 1);
@@ -64,6 +64,8 @@ public class CatController : MonoBehaviour {
 	void FixedUpdate() {
 		float horizontalSpeed = axes[Axe.HORIZONTAL] * speed;
 		catRigidbody.velocity = new Vector2(horizontalSpeed, catRigidbody.velocity.y);
+		if(Mathf.Abs(horizontalSpeed) > NEAR_ZERO)
+			GetComponent<SpriteRenderer>().flipX = horizontalSpeed > 0;
 		if(axes[Axe.JUMP] != 0 && !disableJumping && isOnGround) {
 			catRigidbody.AddForce(new Vector2(0, jumpVelocity), ForceMode2D.Impulse);
 			disableJumping = true;
@@ -102,7 +104,7 @@ public class CatController : MonoBehaviour {
 	}
 
 	private void setAnimation(string field, float f) {
-		GetComponent<Animator>().SetFloat(field, Mathf.Abs(f));
+		GetComponent<Animator>().SetFloat(field, f);
 	}
 
 	public Demon getClosestPossesedItem() {

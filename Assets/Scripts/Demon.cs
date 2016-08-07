@@ -31,7 +31,9 @@ public class Demon : MonoBehaviour {
     }
 
     internal void exorcise() {
-        Destroy(smoke);
+        if(smoke != null) {
+            Destroy(smoke);
+        }
         isPossesed = false;
     }
 
@@ -44,14 +46,16 @@ public class Demon : MonoBehaviour {
     }
 
     public void onHit() {
-        StartCoroutine(drop());
+        StartCoroutine(drop(gameObject));
     }
 
-    private IEnumerator drop() {
+    private IEnumerator drop(GameObject go) {
         yield return null;
+        exorcise();
         Destroy(this);
-        gameObject.AddComponent<Rigidbody2D>();
-        gameObject.AddComponent<BoxCollider2D>();
-        gameObject.layer = LayerMask.NameToLayer("Player");
+        go.AddComponent<Rigidbody2D>();
+        go.AddComponent<BoxCollider2D>();
+        go.layer = LayerMask.NameToLayer("Faller");
+        Physics2D.IgnoreLayerCollision(go.layer, LayerMask.NameToLayer("OneWayPlatform"), true);
     }
 }

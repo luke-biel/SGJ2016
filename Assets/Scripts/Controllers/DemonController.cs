@@ -24,8 +24,13 @@ public class DemonController : MonoBehaviour {
 		Random rand = new Random();
 		for(int i = 0; i < notPossesedItems.Count && i < wave; i++) {
 			int x = Random.Range(0, notPossesedItems.Count - 1);
-			notPossesedItems[x].posses();
-			notPossesedItems.RemoveAt(x);
+			try {
+				Demon d = notPossesedItems[x];
+				notPossesedItems.RemoveAt(x);
+				d.posses();
+			} catch {
+				i--;
+			}
 		}
 		StartCoroutine(spawnTimer());
 	}
