@@ -96,10 +96,10 @@ Material:
     m_Floats:
     - first:
         name: _AmbientOcclusionStrength
-      second: 0.11
+      second: 0
     - first:
         name: _AmplifyDepth
-      second: 0
+      second: 0.246
     - first:
         name: _AttenuationMultiplier
       second: 0.1
@@ -108,7 +108,7 @@ Material:
       second: 1
     - first:
         name: _CelShadingLevels
-      second: 18.46
+      second: 28.37
     - first:
         name: _Cutoff
       second: 0.5
@@ -120,7 +120,7 @@ Material:
       second: 0
     - first:
         name: _EmissiveStrength
-      second: 0.13
+      second: 0
     - first:
         name: _GlossMapScale
       second: 1
@@ -150,7 +150,7 @@ Material:
       second: 0
     - first:
         name: _SpecExponent
-      second: 10
+      second: 11.9
     - first:
         name: _SpecStrength
       second: 0.81
@@ -172,10 +172,10 @@ Material:
     m_Colors:
     - first:
         name: _AboveAmbientColour
-      second: {r: 0.18382353, g: 0.17416626, b: 0.13381271, a: 0.3}
+      second: {r: 0.43382353, g: 0.4141123, b: 0.3317474, a: 0.3}
     - first:
         name: _BelowAmbientColour
-      second: {r: 0.09558821, g: 0.09558821, b: 0.09558821, a: 0}
+      second: {r: 0.051470578, g: 0.051470578, b: 0.051470578, a: 0}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
