@@ -84,7 +84,7 @@ Material:
     - first:
         name: _NormalDepth
       second:
-        m_Texture: {fileID: 2800000, guid: 842b8aa4b8aeecc41849db72c7f374fa, type: 3}
+        m_Texture: {fileID: 2800000, guid: 02af6c9a510d7ed4e87de906fac5cb5a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:

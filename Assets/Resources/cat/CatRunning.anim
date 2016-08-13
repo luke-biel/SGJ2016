@@ -23,15 +23,15 @@ AnimationClip:
     - time: 0.016666668
       value: {fileID: 2100000, guid: b955c52fb5d0a4ee5bb4fd16067c3db8, type: 2}
     - time: 0.033333335
-      value: {fileID: 2100000, guid: 59f0370f74620b94696a2b3e47008491, type: 2}
+      value: {fileID: 2100000, guid: 10ba70d13b17234468c78f635a6b9d3d, type: 2}
     - time: 0.05
-      value: {fileID: 2100000, guid: f4790bf5da1d59347af963296eddca5e, type: 2}
+      value: {fileID: 2100000, guid: bb97c2e4211719945bb4e73a634d55cb, type: 2}
     - time: 0.06666667
-      value: {fileID: 2100000, guid: 62a6aae9c43cfb94a8acffc686b877dc, type: 2}
+      value: {fileID: 2100000, guid: 523ee79000ad65e4b85f8580ed9582de, type: 2}
     - time: 0.083333336
-      value: {fileID: 2100000, guid: e9a0c130e0f09704c9afbc2b7358de9f, type: 2}
+      value: {fileID: 2100000, guid: 74512fb4531dce5448ab0b88e5ea0a1f, type: 2}
     - time: 0.1
-      value: {fileID: 2100000, guid: 43dfcb92f22d0b3428676c2569546267, type: 2}
+      value: {fileID: 2100000, guid: 2413ff5dd894c8f4aaa2af8b0ed805fd, type: 2}
     - time: 0.11666667
       value: {fileID: 2100000, guid: 17cb5a814078d404c816e8f614174f2c, type: 2}
     attribute: m_Materials.Array.data[0]
@@ -81,11 +81,11 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 2100000, guid: af5f7f4a11d4e48258479950774f2cb5, type: 2}
     - {fileID: 2100000, guid: b955c52fb5d0a4ee5bb4fd16067c3db8, type: 2}
-    - {fileID: 2100000, guid: 59f0370f74620b94696a2b3e47008491, type: 2}
-    - {fileID: 2100000, guid: f4790bf5da1d59347af963296eddca5e, type: 2}
-    - {fileID: 2100000, guid: 62a6aae9c43cfb94a8acffc686b877dc, type: 2}
-    - {fileID: 2100000, guid: e9a0c130e0f09704c9afbc2b7358de9f, type: 2}
-    - {fileID: 2100000, guid: 43dfcb92f22d0b3428676c2569546267, type: 2}
+    - {fileID: 2100000, guid: 10ba70d13b17234468c78f635a6b9d3d, type: 2}
+    - {fileID: 2100000, guid: bb97c2e4211719945bb4e73a634d55cb, type: 2}
+    - {fileID: 2100000, guid: 523ee79000ad65e4b85f8580ed9582de, type: 2}
+    - {fileID: 2100000, guid: 74512fb4531dce5448ab0b88e5ea0a1f, type: 2}
+    - {fileID: 2100000, guid: 2413ff5dd894c8f4aaa2af8b0ed805fd, type: 2}
     - {fileID: 2100000, guid: 17cb5a814078d404c816e8f614174f2c, type: 2}
     - {fileID: 21300000, guid: 8757f4c9c4a66be4f9df8d91167dcb5b, type: 3}
     - {fileID: 21300000, guid: 7ccb468073a4c6d4dabd2fa4e6797d61, type: 3}
